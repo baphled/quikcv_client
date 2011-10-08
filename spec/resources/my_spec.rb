@@ -1,4 +1,5 @@
-require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'resources', 'my.rb')
+require "spec_helper"
+
 describe QuikCV::My do
   it "stores the site url" do
     QuikCV::My.site.to_s.should eql 'http://api.quikcv.com/api/v1'
