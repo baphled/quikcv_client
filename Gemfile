@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 source 'http://gemcutter.org'
 
+gem 'jeweler'
+gem 'rake'
 gem 'activeresource'
 gem 'mash'
 
