@@ -31,7 +31,7 @@ describe QuikCV::Client do
       }
       QuikCV::My.
         stub(:get).
-        with(:personal_details, :auth_token => 'abcd').
+        with('personal-details', :auth_token => 'abcd').
         and_return @hash
     end
 
@@ -89,7 +89,7 @@ describe QuikCV::Client do
         }
       QuikCV::My.
         stub(:get).
-        with(:profile, :auth_token => 'abcd').
+        with('profile', :auth_token => 'abcd').
         and_return @hash
     end
     

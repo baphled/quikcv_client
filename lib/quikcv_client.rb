@@ -16,8 +16,8 @@ module QuikCV
         true
       end
 
-      def method_missing *args
-        Mash.new QuikCV::My.get(*args, :auth_token => QuikCV::Client.token)
+      def method_missing api_call
+        Mash.new QuikCV::My.get(api_call.to_s.gsub('_','-'), :auth_token => QuikCV::Client.token)
       end
     end
   end
