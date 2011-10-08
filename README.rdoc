@@ -1,5 +1,39 @@
 = quikcv_client
 
+Allows users to access their QuikCV profile and maniupulate their online CV data
+
+== Install
+
+  gem install quikcv_client
+
+== Configuration
+
+Firstly you need to be signed up to (QuikCV)[http://quikcv.com] and
+generate an API key.
+
+Once you have this add it to a configuration file as below:
+
+  QuikCV.configure do |config|
+    config.auth_token = 'abcd'
+  end
+
+== Usage
+
+The gem will deal with all the hard work for you, so you only need to
+know the resource names to gather information from your CV.
+
+
+== Available commands
+
+  QuikCV::Client.profile
+  QuikCV::Client.personal_details
+  QuikCV::Client.personal_statements
+  QuikCV::Client.jobs
+  QuikCV::Client.education
+  QuikCV::Client.courses
+  QuikCV::Client.skills
+  QuikCV::Client::availability
+
 Description goes here.
 
 == Contributing to quikcv_client
