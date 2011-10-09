@@ -2,13 +2,13 @@ require "spec_helper"
 
 describe QuikCV::Client do
   it "allows us to configure to set the API key" do
-    QuikCV::Client.configure { |conf| conf.token = 'abcd' }
-    QuikCV::Client.token.should eql 'abcd'
+    QuikCV.configure { |conf| conf.token = 'abcd' }
+    QuikCV.token.should eql 'abcd'
   end
 
   it "takes the users API key as an arguement" do
     QuikCV::Client.new 'abcd'
-    QuikCV::Client.token.should eql 'abcd'
+    QuikCV.token.should eql 'abcd'
   end
 
   it "makes a URL request to QuikCV's API url" do
